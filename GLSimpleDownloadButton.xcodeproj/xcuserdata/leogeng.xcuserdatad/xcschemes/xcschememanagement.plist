@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GLSimpleDownloadButtonExample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6B27A13C1E77D28300961527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B27A14D1E77DF5700961527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B27A1601E77DF5800961527</key>
 		<dict>
 			<key>primary</key>
 			<true/>

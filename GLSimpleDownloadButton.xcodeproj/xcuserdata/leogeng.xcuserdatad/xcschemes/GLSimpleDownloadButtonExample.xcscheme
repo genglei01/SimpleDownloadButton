@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B27A13C1E77D28300961527"
-               BuildableName = "GLSimpleDownloadButton.framework"
-               BlueprintName = "GLSimpleDownloadButton"
+               BlueprintIdentifier = "6B27A14D1E77DF5700961527"
+               BuildableName = "GLSimpleDownloadButtonExample.app"
+               BlueprintName = "GLSimpleDownloadButtonExample"
                ReferencedContainer = "container:GLSimpleDownloadButton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B27A1601E77DF5800961527"
+               BuildableName = "GLSimpleDownloadButtonExampleUITests.xctest"
+               BlueprintName = "GLSimpleDownloadButtonExampleUITests"
+               ReferencedContainer = "container:GLSimpleDownloadButton.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6B27A14D1E77DF5700961527"
+            BuildableName = "GLSimpleDownloadButtonExample.app"
+            BlueprintName = "GLSimpleDownloadButtonExample"
+            ReferencedContainer = "container:GLSimpleDownloadButton.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B27A13C1E77D28300961527"
-            BuildableName = "GLSimpleDownloadButton.framework"
-            BlueprintName = "GLSimpleDownloadButton"
+            BlueprintIdentifier = "6B27A14D1E77DF5700961527"
+            BuildableName = "GLSimpleDownloadButtonExample.app"
+            BlueprintName = "GLSimpleDownloadButtonExample"
             ReferencedContainer = "container:GLSimpleDownloadButton.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B27A13C1E77D28300961527"
-            BuildableName = "GLSimpleDownloadButton.framework"
-            BlueprintName = "GLSimpleDownloadButton"
+            BlueprintIdentifier = "6B27A14D1E77DF5700961527"
+            BuildableName = "GLSimpleDownloadButtonExample.app"
+            BlueprintName = "GLSimpleDownloadButtonExample"
             ReferencedContainer = "container:GLSimpleDownloadButton.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
