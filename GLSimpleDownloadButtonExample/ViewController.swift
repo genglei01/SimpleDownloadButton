@@ -11,7 +11,7 @@ import GLSimpleDownloadButton
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var btnDownload: SimpleDownloadButton!
+    @IBOutlet weak var btnDownload: GLSimpleDownloadButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        btnDownload.setImage( #imageLiteral(resourceName: "download.png"), for: .willDownload)

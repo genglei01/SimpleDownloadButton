@@ -14,7 +14,7 @@ public enum GLDownloadStatus {
 }
 
 
-public class SimpleDownloadButton: UIView {
+public class GLSimpleDownloadButton: UIView {
     fileprivate var _pendingImage:UIImage?
     fileprivate var _willDownloadImage:UIImage?
     fileprivate var _downloadedImage:UIImage?
@@ -42,7 +42,7 @@ public class SimpleDownloadButton: UIView {
         }
     }
     
-    public var tapEvent:((_ sender:SimpleDownloadButton)->Void)?
+    public var tapEvent:((_ sender:GLSimpleDownloadButton)->Void)?
     public var status:GLDownloadStatus = .willDownload{
         didSet{
             self.setNeedsDisplay()
@@ -129,7 +129,7 @@ public class SimpleDownloadButton: UIView {
     }
 }
 
-extension SimpleDownloadButton{
+extension GLSimpleDownloadButton{
     public func setImage(_ image:UIImage?,for status:GLDownloadStatus){
         switch status {
         case .willDownload:
@@ -165,7 +165,7 @@ extension SimpleDownloadButton{
     }
 }
 
-extension SimpleDownloadButton{
+extension GLSimpleDownloadButton{
     fileprivate func drawText(text:String?){
         guard let text = text else {
             return
