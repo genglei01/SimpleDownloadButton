@@ -10,21 +10,29 @@ import UIKit
 import GLSimpleDownloadButton
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var container: UIView!
+    
     @IBOutlet weak var btnDownload: GLSimpleDownloadButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        btnDownload.setImage( #imageLiteral(resourceName: "download.png"), for: .willDownload)
-//        btnDownload.setTitle("Download", for: .willDownload)
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        container.layer.borderColor = UIColor.blue.cgColor
+        container.layer.borderWidth = 1
+        self.btnDownload.layer.borderWidth = 1
+        self.btnDownload.layer.borderColor = UIColor.blue.cgColor
+        self.btnDownload.tapEvent = { sender in
+            if sender.status == .downloading {
+                self.btnDownload.layer.borderWidth = 0
+            }else{
+                self.btnDownload.layer.borderWidth = 1
+            }
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

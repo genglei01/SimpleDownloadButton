@@ -18,10 +18,11 @@ public class GLSimpleDownloadButton: UIView {
     fileprivate var _pendingImage:UIImage?
     fileprivate var _willDownloadImage:UIImage?
     fileprivate var _downloadedImage:UIImage?
+    fileprivate var _borderWidth:CGFloat = 0
     
-    fileprivate var _pendingText:String? = "Waiting"
+    fileprivate var _pendingText:String? = "Pending"
     fileprivate var _willDownloadText:String? = "Download"
-    fileprivate var _downloadedText:String? = "Downloaded"
+    fileprivate var _downloadedText:String? = "Complete"
     var font = UIFont.systemFont(ofSize: 16)
     
     fileprivate var _radius:CGFloat!{
@@ -49,7 +50,7 @@ public class GLSimpleDownloadButton: UIView {
         }
     }
     
-    public  var stopButtonWidth:CGFloat = 20{
+    public  var stopButtonWidth:CGFloat = 10{
         didSet{
             self.setNeedsDisplay()
         }
@@ -67,7 +68,7 @@ public class GLSimpleDownloadButton: UIView {
         }
     }
     
-    public  var fillLineWidth:CGFloat = 5{
+    public  var fillLineWidth:CGFloat = 3{
         didSet{
             self.setNeedsDisplay()
         }
@@ -82,7 +83,6 @@ public class GLSimpleDownloadButton: UIView {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.tintColor = UIColor.blue
-        self.backgroundColor = UIColor.yellow
         let tapEvent = UITapGestureRecognizer(target: self, action: #selector(self.tapEvent(sender:)))
         self.addGestureRecognizer(tapEvent)
     }
