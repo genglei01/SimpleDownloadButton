@@ -11,6 +11,8 @@ import GLSimpleDownloadButton
 
 class ViewController: UIViewController {
     @IBOutlet weak var btnDownload: GLSimpleDownloadButton!
+    @IBOutlet weak var btnImgDownload: GLSimpleDownloadButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,12 @@ class ViewController: UIViewController {
                 self.btnDownload.layer.borderWidth = 1
             }
         }
+        
+        btnImgDownload.setImage(#imageLiteral(resourceName: "download.png"), for: .willDownload)
+        btnImgDownload.stopButtonWidth = 20
+        btnImgDownload.emptyLineWidth = 2
+        btnImgDownload.progress = 0.3
+        btnImgDownload.fillLineWidth = 5
     }
     
     override func didReceiveMemoryWarning() {
