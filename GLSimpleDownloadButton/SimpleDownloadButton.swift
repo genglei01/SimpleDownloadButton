@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public enum GLDownloadStatus {
     case willDownload,downloading,downloaded,pending
 }
@@ -56,7 +55,7 @@ public class GLSimpleDownloadButton: UIView {
         }
     }
     
-    public var progress = 0.5{
+    public var progress = 0.0{
         didSet{
             self.setNeedsDisplay()
         }
