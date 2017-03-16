@@ -19,7 +19,6 @@
 		6B27A16F1E77DF6500961527 /* GLSimpleDownloadButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B27A13D1E77D28300961527 /* GLSimpleDownloadButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B27A1751E77E0FF00961527 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B27A1741E77E0FF00961527 /* download.png */; };
 		6B27A1771E77F19500961527 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A1761E77F19500961527 /* String.swift */; };
-		7596B35B7C82915637CA01E7 /* Pods_GLSimpleDownloadButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F39D7026FEF8CC441E0636 /* Pods_GLSimpleDownloadButton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		10B28EAF18EA16ECD5CDB32A /* Pods-GLSimpleDownloadButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSimpleDownloadButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLSimpleDownloadButton/Pods-GLSimpleDownloadButton.debug.xcconfig"; sourceTree = "<group>"; };
 		6B27A13D1E77D28300961527 /* GLSimpleDownloadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLSimpleDownloadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B27A1401E77D28300961527 /* GLSimpleDownloadButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSimpleDownloadButton.h; sourceTree = "<group>"; };
 		6B27A1411E77D28300961527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +69,6 @@
 		6B27A1671E77DF5800961527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B27A1741E77E0FF00961527 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		6B27A1761E77F19500961527 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		D0F39D7026FEF8CC441E0636 /* Pods_GLSimpleDownloadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLSimpleDownloadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D542E0DC507A93BD0F2B1F19 /* Pods-GLSimpleDownloadButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSimpleDownloadButton.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLSimpleDownloadButton/Pods-GLSimpleDownloadButton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7596B35B7C82915637CA01E7 /* Pods_GLSimpleDownloadButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +104,6 @@
 				6B27A14F1E77DF5700961527 /* GLSimpleDownloadButtonExample */,
 				6B27A1641E77DF5800961527 /* GLSimpleDownloadButtonExampleUITests */,
 				6B27A13E1E77D28300961527 /* Products */,
-				D9A5F581E71BCB8B1F86EC0D /* Pods */,
-				84064BF608C937EA67983987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,23 +159,6 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
-		84064BF608C937EA67983987 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D0F39D7026FEF8CC441E0636 /* Pods_GLSimpleDownloadButton.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D9A5F581E71BCB8B1F86EC0D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				10B28EAF18EA16ECD5CDB32A /* Pods-GLSimpleDownloadButton.debug.xcconfig */,
-				D542E0DC507A93BD0F2B1F19 /* Pods-GLSimpleDownloadButton.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,12 +177,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B27A1451E77D28300961527 /* Build configuration list for PBXNativeTarget "GLSimpleDownloadButton" */;
 			buildPhases = (
-				1DDDC1F2601015D769DAB8F0 /* [CP] Check Pods Manifest.lock */,
 				6B27A1381E77D28300961527 /* Sources */,
 				6B27A1391E77D28300961527 /* Frameworks */,
 				6B27A13A1E77D28300961527 /* Headers */,
 				6B27A13B1E77D28300961527 /* Resources */,
-				117C4C8A1A55B4CC7BE8D756 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,39 +304,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		117C4C8A1A55B4CC7BE8D756 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLSimpleDownloadButton/Pods-GLSimpleDownloadButton-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1DDDC1F2601015D769DAB8F0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B27A1381E77D28300961527 /* Sources */ = {
@@ -527,7 +468,6 @@
 		};
 		6B27A1461E77D28300961527 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10B28EAF18EA16ECD5CDB32A /* Pods-GLSimpleDownloadButton.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -549,7 +489,6 @@
 		};
 		6B27A1471E77D28300961527 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D542E0DC507A93BD0F2B1F19 /* Pods-GLSimpleDownloadButton.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -652,6 +591,7 @@
 				6B27A1691E77DF5800961527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B27A16D1E77DF5800961527 /* Build configuration list for PBXNativeTarget "GLSimpleDownloadButtonExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +600,7 @@
 				6B27A16B1E77DF5800961527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
