@@ -10,13 +10,10 @@ import UIKit
 import GLSimpleDownloadButton
 
 class ViewController: UIViewController {
-    @IBOutlet weak var container: UIView!
-    
     @IBOutlet weak var btnDownload: GLSimpleDownloadButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        container.layer.borderColor = UIColor.blue.cgColor
-        container.layer.borderWidth = 1
+        
         self.btnDownload.layer.borderWidth = 1
         self.btnDownload.layer.borderColor = UIColor.blue.cgColor
         self.btnDownload.tapEvent = { sender in
