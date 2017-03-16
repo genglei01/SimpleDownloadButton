@@ -89,12 +89,18 @@ public class GLSimpleDownloadButton: UIView {
     override public func draw(_ rect: CGRect) {
         switch self.status {
         case .willDownload:
-            self.drawText(text: _willDownloadText)
-            self.drawImage(img: _willDownloadImage)
+            if _willDownloadImage == nil {
+                self.drawText(text: _willDownloadText)
+            }else{
+                self.drawImage(img: _willDownloadImage)
+            }
             break
         case .pending:
-            self.drawText(text: _pendingText)
-            self.drawImage(img: _pendingImage)
+            if _pendingImage == nil {
+                self.drawText(text: _pendingText)
+            }else{
+                self.drawImage(img: _pendingImage)
+            }
             break
         case .downloading:
             self.drawStopRect()
@@ -102,7 +108,9 @@ public class GLSimpleDownloadButton: UIView {
             self.drawProgress()
             break
         case .downloaded:
-            self.drawText(text: _downloadedText)
+            if _downloadedImage == nil {
+                self.drawText(text: _downloadedText)
+            }
             self.drawImage(img: _downloadedImage)
             break
         }
