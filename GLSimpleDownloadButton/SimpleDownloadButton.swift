@@ -79,8 +79,23 @@ public class GLSimpleDownloadButton: UIView {
         }
     }
     
+    public init() {
+        super.init(frame: CGRect.zero)
+        self.initlize()
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initlize()
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.initlize()
+    }
+    
+    private func initlize(){
+        self.backgroundColor = UIColor.clear
         self.tintColor = UIColor.blue
         let tapEvent = UITapGestureRecognizer(target: self, action: #selector(self.tapEvent(sender:)))
         self.addGestureRecognizer(tapEvent)
