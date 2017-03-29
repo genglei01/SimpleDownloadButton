@@ -26,10 +26,12 @@ public class GLSimpleDownloadButton: UIView {
     
     fileprivate var _radius:CGFloat!{
         get{
-            if  self.status == GLDownloadStatus.willDownload{
+            if self.radius != 0 {
+                return self.radius
+            }else if  self.status == GLDownloadStatus.willDownload{
                 return frame.width/8
             }else{
-                return (frame.width < frame.height ? frame.width : frame.height)/2
+                return (frame.width < frame.height ? frame.width : frame.height)/2 - 2
             }
         }
     }
@@ -49,7 +51,9 @@ public class GLSimpleDownloadButton: UIView {
         }
     }
     
-    public  var stopButtonWidth:CGFloat = 10{
+    public var radius:CGFloat! = 0
+    
+    public var stopButtonWidth:CGFloat = 10{
         didSet{
             self.setNeedsDisplay()
         }
@@ -57,7 +61,9 @@ public class GLSimpleDownloadButton: UIView {
     
     public var progress = 0.0{
         didSet{
-            self.setNeedsDisplay()
+            if self.progress != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
     
@@ -69,13 +75,19 @@ public class GLSimpleDownloadButton: UIView {
     
     public  var fillLineWidth:CGFloat = 3{
         didSet{
-            self.setNeedsDisplay()
+            if self.fillLineWidth != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
     
+    private var _tintColor = UIColor.blue
     override public var tintColor: UIColor!{
-        didSet{
-            self.setNeedsDisplay()
+        get{
+            return self._tintColor
+        }
+        set{
+            self._tintColor = newValue
         }
     }
     
@@ -132,20 +144,20 @@ public class GLSimpleDownloadButton: UIView {
     }
     
     @objc internal func tapEvent(sender:UIGestureRecognizer){
-        switch self.status{
-        case .willDownload:
-            self.status = .downloading
-            break
-        case .downloading:
-            self.status = .pending
-            break
-        case .pending:
-            self.status = .downloaded
-            break
-        case .downloaded:
-            self.status = .willDownload
-            break
-        }
+        /*switch self.status{
+         case .willDownload:
+         self.status = .downloading
+         break
+         case .downloading:
+         self.status = .pending
+         break
+         case .pending:
+         self.status = .downloaded
+         break
+         case .downloaded:
+         self.status = .willDownload
+         break
+         }*/
         
         self.tapEvent?(self)
     }
@@ -230,7 +242,6 @@ extension GLSimpleDownloadButton{
     
     fileprivate func drawCircle(endAngle:CGFloat,lineWidth:CGFloat,radius:CGFloat){
         let bezier = UIBezierPath()
-        
         self.tintColor.setStroke()
         
         
