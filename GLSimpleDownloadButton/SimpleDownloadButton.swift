@@ -144,21 +144,6 @@ public class GLSimpleDownloadButton: UIView {
     }
     
     @objc internal func tapEvent(sender:UIGestureRecognizer){
-        /*switch self.status{
-         case .willDownload:
-         self.status = .downloading
-         break
-         case .downloading:
-         self.status = .pending
-         break
-         case .pending:
-         self.status = .downloaded
-         break
-         case .downloaded:
-         self.status = .willDownload
-         break
-         }*/
-        
         self.tapEvent?(self)
     }
 }

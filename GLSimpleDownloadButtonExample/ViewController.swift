@@ -16,21 +16,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.btnDownload.layer.borderWidth = 1
-        self.btnDownload.layer.borderColor = UIColor.blue.cgColor
         self.btnDownload.tapEvent = { sender in
-            if sender.status == .downloading {
-                self.btnDownload.layer.borderWidth = 0
-            }else{
-                self.btnDownload.layer.borderWidth = 1
+            if sender.status == .willDownload {
+                sender.status = .downloading
+            } else if sender.status == .downloading {
+                sender.status = .downloaded
+            }else if sender.status == .downloaded{
+                sender.status = .willDownload
             }
         }
-        
-        btnImgDownload.setImage(#imageLiteral(resourceName: "download.png"), for: .willDownload)
-        btnImgDownload.stopButtonWidth = 20
-        btnImgDownload.emptyLineWidth = 2
-        btnImgDownload.progress = 0.3
-        btnImgDownload.fillLineWidth = 5
     }
     
     override func didReceiveMemoryWarning() {
