@@ -11,7 +11,6 @@ import GLSimpleDownloadButton
 
 class ViewController: UIViewController {
     @IBOutlet weak var btnDownload: GLSimpleDownloadButton!
-    @IBOutlet weak var btnImgDownload: GLSimpleDownloadButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +18,7 @@ class ViewController: UIViewController {
         self.btnDownload.tapEvent = { sender in
             if sender.status == .willDownload {
                 sender.status = .downloading
+                sender.progress = 0.3
             } else if sender.status == .downloading {
                 sender.status = .downloaded
             }else if sender.status == .downloaded{
